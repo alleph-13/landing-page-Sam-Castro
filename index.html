@@ -1,0 +1,795 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sam Castro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sam Castro, influenciador digital e criador de conteúdo em Fortaleza, Ceará. Moda, lifestyle, beleza, fitness e comunicação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Sam Castro","alternateName":"Sam Castro","jobTitle":"Influenciador digital e criador de conteúdo","address":{"@type":"PostalAddress","addressLocality":"Fortaleza","addressRegion":"CE","addressCountry":"BR"},"sameAs":["https://www.instagram.com/samcastroreal/","https://www.tiktok.com/@samcastroreal"]}}
+</script>
+<style>
+  /* Layout: vitrine editorial. Hero em duas colunas, galeria de 5 cards em largura total, seções reservadas abaixo. Visual único e claro, fiel à paleta do cliente. */
+  :root {
+    --preto: #17191B;
+    --offwhite: #F4F1EA;
+    --turquesa: #55C7C2;
+    --neon: #4DEFE6;
+    --neon-forte: #8CFFF7;
+    --turquesa-texto: #063F3C;
+    --cinza: #A6AAA9;
+    --cinza-texto: #2F3433;
+    --linha: rgba(23, 25, 27, 0.22);
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+    --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--cinza);
+    color: var(--preto);
+    font: 400 16px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Fundo global: cinza da paleta (#A6AAA9) com luz suave no canto superior e sombra leve embaixo, fixo atrás de todas as seções */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(70vmax 55vmax at 0% 0%, rgba(244, 241, 234, 0.30), rgba(244, 241, 234, 0) 65%),
+      radial-gradient(60vmax 50vmax at 100% 100%, rgba(23, 25, 27, 0.10), rgba(23, 25, 27, 0) 68%),
+      var(--cinza);
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--turquesa-texto); outline-offset: 3px; border-radius: 4px; }
+  .wrap { width: 100%; max-width: 1680px; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+  /* Títulos de seção (e a marca no topo): mesmo tamanho e efeito neon turquesa */
+  .eyebrow, .marca { font: 700 clamp(1.05rem, 2.4vw, 1.3rem)/1.1 var(--sans); letter-spacing: 0.2em; text-transform: uppercase; color: #0B4F4B; margin: 0;
+    text-shadow: 0 0 6px rgba(77, 239, 230, 0.95), 0 0 14px rgba(77, 239, 230, 0.75), 0 0 30px rgba(77, 239, 230, 0.5); }
+  .eyebrow::after { content: ""; display: block; width: 44px; height: 3px; margin-top: 12px; border-radius: 3px; background: var(--neon); box-shadow: 0 0 8px 1px rgba(77, 239, 230, 0.9), 0 0 20px 3px rgba(77, 239, 230, 0.5); }
+
+  /* Cabeçalho */
+  .topo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 22px; }
+  .marca { text-decoration: none; }
+  .topo { position: relative; z-index: 40; }
+  .menu-btn { display: none; }
+  .menu { display: flex; flex-wrap: wrap; gap: 10px 14px; }
+  /* Links do menu: mesmo neon turquesa dos cards; no hover intensifica e salta */
+  .menu a {
+    font-size: 0.9rem; font-weight: 500; text-decoration: none; color: var(--preto);
+    padding: 9px 20px; border-radius: 999px; background: rgba(244, 241, 234, 0.14);
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.75), 0 0 26px 2px rgba(77, 239, 230, 0.38);
+    transition: box-shadow .3s ease, background .3s ease;
+  }
+  .menu a:hover, .menu a:focus-visible {
+    background: rgba(140, 255, 247, 0.32);
+    box-shadow: 0 0 0 2px var(--neon-forte), 0 0 16px 3px rgba(140, 255, 247, 0.95), 0 0 44px 8px rgba(77, 239, 230, 0.6);
+    animation: salto .7s ease-in-out infinite;
+  }
+  /* Menu exclusivo do celular */
+  @media (max-width: 699px) {
+    .topo { flex-wrap: nowrap; }
+    .menu-btn { display: grid; place-items: center; flex: none; width: 52px; height: 52px; padding: 0; border: 0; border-radius: 50%; cursor: pointer; color: var(--preto); background: rgba(244, 241, 234, 0.18);
+      box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.75), 0 0 26px 2px rgba(77, 239, 230, 0.38); transition: box-shadow .3s ease, background .3s ease; }
+    .menu-btn:hover, .menu-btn:focus-visible, .menu-btn[aria-expanded="true"] { background: rgba(140, 255, 247, 0.38); outline: none;
+      box-shadow: 0 0 0 2px var(--neon-forte), 0 0 16px 3px rgba(140, 255, 247, 0.95), 0 0 40px 8px rgba(77, 239, 230, 0.55); }
+    .barras { position: relative; display: block; width: 22px; height: 16px; }
+    .barras i { position: absolute; left: 0; width: 100%; height: 2.5px; border-radius: 2px; background: currentColor; transition: transform .3s ease, opacity .2s ease, top .3s ease; }
+    .barras i:nth-child(1) { top: 0; } .barras i:nth-child(2) { top: 6.75px; } .barras i:nth-child(3) { top: 13.5px; }
+    .menu-btn[aria-expanded="true"] .barras i:nth-child(1) { top: 6.75px; transform: rotate(45deg); }
+    .menu-btn[aria-expanded="true"] .barras i:nth-child(2) { opacity: 0; }
+    .menu-btn[aria-expanded="true"] .barras i:nth-child(3) { top: 6.75px; transform: rotate(-45deg); }
+    .topo[data-js] .menu { display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0; flex-direction: column; flex-wrap: nowrap; gap: 8px; padding: 14px; border-radius: 18px; background: rgba(23, 25, 27, 0.96);
+      box-shadow: 0 0 0 1.5px var(--neon), 0 0 14px 2px rgba(77, 239, 230, 0.6), 0 18px 40px rgba(0, 0, 0, 0.35); }
+    .topo[data-js] .menu.aberto { display: flex; animation: menu-entra .25s ease; }
+    .topo[data-js] .menu a { display: block; text-align: center; padding: 14px 20px; font-size: 1.05rem; color: var(--offwhite); background: rgba(244, 241, 234, 0.06); }
+    .topo[data-js] .menu a:hover, .topo[data-js] .menu a:focus-visible { color: var(--preto); animation: none; }
+  }
+  @keyframes menu-entra { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes salto { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1fr; gap: 36px; padding-block: 24px 64px; justify-items: center; text-align: center; }
+  .so-leitor { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .hero .papel, .hero .areas { margin-inline: auto; }
+  .hero h1 { font: 400 clamp(3.6rem, 12vw, 8.5rem)/0.9 var(--serif); letter-spacing: -0.01em; text-transform: uppercase; margin: 18px 0 0; text-wrap: balance; }
+  .hero h1 em { display: block; font-style: italic; text-transform: none; letter-spacing: -0.02em; }
+  .hero .papel { margin: 28px 0 0; max-width: 30ch; font: 400 clamp(1.25rem, 2.6vw, 1.6rem)/1.3 var(--serif); }
+  .hero .areas { margin: 12px 0 0; color: var(--cinza-texto); max-width: 44ch; }
+  .atalhos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 24px; border-radius: 999px; font: 500 0.92rem/1 var(--sans); text-decoration: none; border: 1px solid var(--preto); color: var(--preto); transition: background .2s, color .2s, border-color .2s; }
+  .btn:hover { background: var(--preto); color: var(--offwhite); }
+  .btn.principal { background: var(--turquesa); border-color: var(--turquesa); color: var(--preto); }
+  .btn.principal:hover { background: var(--preto); border-color: var(--preto); color: var(--offwhite); }
+  .hero-foto { position: relative; aspect-ratio: 4 / 5; max-width: 100%; width: 100%; max-height: 78vh; border-radius: 12px; overflow: hidden; background: linear-gradient(160deg, #e7e3da, #d3d3cd); border: 1px dashed rgba(23, 25, 27, 0.38); display: grid; place-items: center; text-align: center; padding: 24px; }
+  .hero-foto.tem-foto { border: 0; padding: 0; background: #17191B; isolation: isolate;
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.75), 0 0 26px 2px rgba(77, 239, 230, 0.38); }
+  .hero-texto { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 90px 16px clamp(14px, 3vw, 30px); text-align: center; color: #F4F1EA;
+    background: linear-gradient(to top, rgba(10, 12, 14, 0.82) 0%, rgba(10, 12, 14, 0.55) 45%, rgba(10, 12, 14, 0) 100%); }
+  .hero-texto p { margin: 0; white-space: nowrap; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 18px rgba(0, 0, 0, 0.55); }
+  .hero-texto .papel { max-width: none; font: 400 clamp(0.9rem, 3.9vw, 1.9rem)/1.2 var(--serif); color: #C9FFFB;
+    text-shadow: 0 0 2px #fff, 0 0 7px var(--neon), 0 0 16px var(--neon), 0 0 32px rgba(77, 239, 230, 0.85), 0 0 56px rgba(77, 239, 230, 0.5); }
+  .hero-texto .areas { max-width: none; margin-top: 6px; font: 500 clamp(0.66rem, 2.9vw, 1rem)/1.3 var(--sans); letter-spacing: 0.04em; color: #B5FFFA;
+    text-shadow: 0 0 1px #fff, 0 0 6px var(--neon), 0 0 14px rgba(77, 239, 230, 0.9), 0 0 28px rgba(77, 239, 230, 0.55); }
+  .hero-foto span { font: 600 0.72rem/1.6 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--cinza-texto); }
+  .hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Galeria */
+  .galeria-secao { padding-block: 24px 80px; }
+  .galeria-topo { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+  .galeria-topo h2 { font: 400 clamp(1.8rem, 4vw, 2.8rem)/1.05 var(--serif); margin: 0; }
+  .galeria { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: calc(var(--gutter-l) * -1) calc(var(--gutter-r) * -1); padding-inline: var(--gutter-l) var(--gutter-r); scroll-padding-inline: var(--gutter-l); padding-block: 36px; margin-block: -36px; }
+  .galeria::-webkit-scrollbar { display: none; }
+  .cartao { flex: 0 0 min(68vw, 300px); scroll-snap-align: start; position: relative; aspect-ratio: 4 / 5; border-radius: 10px; overflow: hidden; background: #dcd9d0; isolation: isolate;
+    /* Borda neon turquesa sempre visível; intensifica no hover */
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.75), 0 0 26px 2px rgba(77, 239, 230, 0.38);
+    transition: box-shadow .35s ease, transform .35s ease; }
+  .cartao:hover { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--neon-forte), 0 0 16px 3px rgba(140, 255, 247, 0.95), 0 0 44px 8px rgba(77, 239, 230, 0.6); }
+  .cartao::after { content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none; background: linear-gradient(to top, rgba(23, 25, 27, 0.28), rgba(23, 25, 27, 0) 42%); }
+  .slide { position: absolute; inset: 0; opacity: 0; z-index: 0; transition: opacity 1.2s ease; overflow: hidden; }
+  .slide.is-leaving { opacity: 1; z-index: 1; }
+  .slide.is-active { opacity: 1; z-index: 2; }
+  .media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform 0s linear 1.4s; will-change: transform; }
+  .slide.is-active .media { transform: scale(1.09); transition: transform 6s linear; }
+  .ph { display: grid; place-items: center; }
+  .ph span { font: 600 0.68rem/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; }
+  .ph-0 { background: linear-gradient(160deg, #2b2e30, #17191B); color: rgba(244, 241, 234, 0.55); }
+  .ph-1 { background: linear-gradient(160deg, #e3dfd5, #c4c7c1); color: rgba(23, 25, 27, 0.5); }
+  .ph-2 { background: linear-gradient(160deg, #6fd0cb, #2f8f8b); color: rgba(23, 25, 27, 0.55); }
+  .ph-3 { background: linear-gradient(160deg, #b4b8b7, #7d8281); color: rgba(244, 241, 234, 0.7); }
+
+  /* Sobre mim */
+  .reservado.sobre { grid-template-columns: 1fr; gap: 28px; padding-block: 52px 72px; }
+  .reservado.sobre h2 { margin-top: 0; }
+  .sobre-corpo { display: grid; gap: 40px; min-width: 0; }
+  .sobre-texto { display: grid; gap: 18px; max-width: none; }
+  .sobre-texto p { margin: 0; font-size: 1.1rem; line-height: 1.65; color: var(--cinza-texto); }
+  .sobre-texto p.destaque-p { font: 400 clamp(1.4rem, 3vw, 1.9rem)/1.3 var(--serif); color: var(--preto); }
+  .sobre-texto p.sub-destaque { margin-top: -8px; font: italic 500 clamp(1.25rem, 2.2vw, 1.55rem)/1.35 "Cormorant Garamond", Georgia, "Times New Roman", serif; letter-spacing: 0.01em; text-transform: none; color: var(--preto); }
+  .sobre-texto p.calibri { font-family: Calibri, Carlito, "Segoe UI", sans-serif; font-size: clamp(1.15rem, 1.7vw, 1.35rem); line-height: 1.6; }
+  .sobre-texto p.calibri strong { font-weight: 700; }
+  .sobre-texto p.italico-classico { font: italic 500 clamp(1.25rem, 2.2vw, 1.55rem)/1.4 "Cormorant Garamond", Georgia, "Times New Roman", serif; letter-spacing: 0.01em; color: var(--preto); }
+  .sobre-texto .italico-classico strong { font-weight: 600; }
+  /* Palavras em destaque: bordô royal com sombra neon turquesa */
+  .sobre-texto .destaque-p strong, .sobre-texto .sub-destaque strong, .sobre-texto .italico-classico strong { color: #3D0F1F;
+    text-shadow: 0 0 4px rgba(77, 239, 230, 0.85), 0 0 10px rgba(77, 239, 230, 0.6), 0 0 22px rgba(77, 239, 230, 0.4); }
+  .sobre-texto .sub-destaque strong { font-weight: 600; }
+  .sobre-texto strong { font-weight: 600; color: var(--turquesa-texto); }
+  .sobre-texto .destaque-p strong { font-weight: 400; font-style: italic; -webkit-text-stroke: 0.6px #3D0F1F; text-shadow: 0 0 3px rgba(77, 239, 230, 0.7), 0 0 9px rgba(77, 239, 230, 0.5), 0 0 20px rgba(77, 239, 230, 0.35); }
+  .sobre-bloco h3 { margin: 0 0 16px; font: 600 0.72rem/1.4 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--turquesa-texto); }
+  /* Nichos de atuação / Diferenciais: brilho turquesa que percorre as letras + linha em degradê */
+  .sobre-bloco h3 { position: relative; display: inline-block; font-size: 0.98rem; font-weight: 800; letter-spacing: 0.18em;
+    color: #063F3C; background: linear-gradient(100deg, #063F3C 0%, #063F3C 38%, #14C4BA 50%, #063F3C 62%, #063F3C 100%); background-size: 260% 100%;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: brilho-turquesa 3.4s linear infinite; }
+  @keyframes brilho-turquesa { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+  @media (prefers-reduced-motion: reduce) { .sobre-bloco h3 { animation: none; background: none; -webkit-text-fill-color: currentColor; } }
+  .nichos, .diferenciais { list-style: none; margin: 0; padding: 0; }
+  .nichos { display: flex; flex-wrap: wrap; gap: 10px; }
+  .nichos li { padding: 9px 18px; border-radius: 999px; font-size: 0.95rem; font-weight: 500; color: var(--preto); background: rgba(244, 241, 234, 0.32); box-shadow: 0 0 0 1.5px var(--neon), 0 0 8px rgba(77, 239, 230, 0.55); }
+  .diferenciais { display: grid; gap: 0; }
+  .diferenciais li { position: relative; padding: 14px 0 14px 30px; border-top: 1px solid var(--linha); font-size: 1.02rem; color: var(--preto); }
+  .diferenciais li:last-child { border-bottom: 1px solid var(--linha); }
+  .diferenciais li::before { content: ""; position: absolute; left: 4px; top: 50%; width: 9px; height: 9px; margin-top: -4px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 8px 2px rgba(77, 239, 230, 0.7); }
+  @media (min-width: 900px) { .diferenciais { grid-template-columns: 1fr 1fr; column-gap: 32px; } .diferenciais li:nth-last-child(2) { border-bottom: 1px solid var(--linha); } }
+
+  /* Seções reservadas */
+  .reservado { padding-block: 72px; border-top: 1px solid var(--linha); display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .reservado h2 { font: 400 clamp(2rem, 5vw, 3.4rem)/1 var(--serif); margin: 14px 0 0; }
+  .caixa { border: 1px dashed rgba(23, 25, 27, 0.38); border-radius: 12px; padding: 28px; color: var(--cinza-texto); background: rgba(244, 241, 234, 0.22); }
+  .caixa strong { display: block; font: 600 0.72rem/1.4 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--turquesa-texto); margin-bottom: 14px; }
+  .caixa ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+
+  /* Projetos e colaborações */
+  .projetos { padding-block: 72px 88px; border-top: 1px solid var(--linha); }
+  .projetos-topo h2 { font: 400 clamp(2rem, 5vw, 3.4rem)/1 var(--serif); margin: 14px 0 0; }
+  .projetos-grade { list-style: none; margin: 0; padding: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 34px 14px; }
+  .projeto { flex: 0 0 calc((100% - 14px) / 2); min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .vcard { position: relative; width: 100%; aspect-ratio: 5 / 7; border-radius: 10px; overflow: hidden; background: #17191B; isolation: isolate;
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.75), 0 0 26px 2px rgba(77, 239, 230, 0.38);
+    transition: box-shadow .35s ease, transform .35s ease; }
+  .vcard:hover { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--neon-forte), 0 0 16px 3px rgba(140, 255, 247, 0.95), 0 0 44px 8px rgba(77, 239, 230, 0.6); }
+  .vcard video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; }
+  .som { position: absolute; right: 10px; bottom: 10px; z-index: 3; width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; color: var(--offwhite); background: rgba(23, 25, 27, 0.72); box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px rgba(77, 239, 230, 0.7); transition: background .2s, color .2s, box-shadow .2s; }
+  .som:hover, .som:focus-visible { background: var(--turquesa); color: var(--preto); box-shadow: 0 0 0 2px var(--neon-forte), 0 0 16px 3px rgba(140, 255, 247, 0.9); outline: none; }
+  .som svg { width: 20px; height: 20px; fill: currentColor; stroke: currentColor; }
+  .som .i-som { display: none; }
+  .som[aria-pressed="true"] .i-som { display: block; }
+  .som[aria-pressed="true"] .i-mudo { display: none; }
+  .marca-nome { margin: 0; max-width: 100%; padding: 8px 18px; border-radius: 999px; background: var(--mbg); color: var(--mfg); font: 700 0.92rem/1.2 var(--sans); letter-spacing: 0.01em; text-align: center; box-shadow: 0 2px 10px rgba(23, 25, 27, 0.18); }
+  .marca-nome[class*="m-"] { text-transform: none; letter-spacing: 0; }
+  .m-oro { font: 400 1.12rem/1.1 var(--sans); padding: 8px 20px; }
+  .m-oro b { color: #D4A017; font-weight: 700; letter-spacing: 0.03em; }
+  .m-gavioes { display: flex; flex-direction: column; align-items: center; gap: 1px; border-radius: 16px; padding: 8px 20px 7px; }
+  .m-gavioes i { font: italic 800 0.98rem/1.05 var(--sans); }
+  .m-gavioes small { font: italic 700 0.7rem/1 var(--sans); color: #E5322D; letter-spacing: 0.04em; }
+  .m-manclub { font: 300 1.02rem/1.1 var(--sans); letter-spacing: 0.04em !important; padding: 8px 22px; }
+  .m-manclub b { font-weight: 800; }
+  .m-kibon { font: 700 1.2rem/1.1 var(--sans); padding: 6px 24px; }
+  .m-ferrovia { font: 600 0.84rem/1.2 var(--sans); letter-spacing: 0.26em !important; padding: 9px 20px 9px 26px; }
+  .m-vybbe { display: flex; align-items: baseline; gap: 6px; font: 800 1rem/1.1 var(--sans); letter-spacing: 0.08em !important; padding: 8px 20px; }
+  .m-vybbe small { font: 500 0.72rem/1 var(--sans); letter-spacing: 0.04em; }
+  .marca-nome.wide { letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.82rem; }
+
+  /* Botão voltar ao topo */
+  .topo-btn { position: fixed; z-index: 50; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(18px, env(safe-area-inset-bottom, 0px)); width: 52px; height: 52px; border: 0; border-radius: 50%; cursor: pointer; display: grid; place-items: center; color: var(--preto); background: var(--turquesa);
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 12px 2px rgba(77, 239, 230, 0.85), 0 0 30px 4px rgba(77, 239, 230, 0.45);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease, background .3s ease; }
+  .topo-btn[hidden] { display: none !important; }
+  .topo-btn.visivel { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .topo-btn:hover, .topo-btn:focus-visible { background: var(--neon-forte); outline: none; transform: translateY(-4px);
+    box-shadow: 0 0 0 2px var(--neon-forte), 0 0 20px 5px rgba(140, 255, 247, 0.95), 0 0 56px 12px rgba(77, 239, 230, 0.65); }
+  .topo-btn svg { width: 24px; height: 24px; }
+
+  /* Rodapé */
+  footer { background: var(--preto); color: var(--offwhite); }
+  .rodape { display: grid; grid-template-columns: 1fr; gap: 36px; padding-block: 64px 40px; }
+  .rodape h2 { font: 400 clamp(2rem, 5vw, 3.2rem)/1 var(--serif); margin: 0 0 6px; }
+  .rodape .eyebrow { color: #C9FFFB; text-shadow: 0 0 2px #fff, 0 0 8px var(--neon), 0 0 20px rgba(77, 239, 230, 0.85), 0 0 40px rgba(77, 239, 230, 0.5); }
+  .redes-bloco { margin-top: 34px; }
+  .rot-redes { display: inline-block; margin: 0 0 16px; font: 800 0.98rem/1.3 var(--sans); letter-spacing: 0.18em; text-transform: uppercase; color: #4DEFE6;
+    background: linear-gradient(100deg, #2FD8CF 0%, #2FD8CF 38%, #FFFFFF 50%, #2FD8CF 62%, #2FD8CF 100%); background-size: 260% 100%;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: brilho-turquesa 3.4s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(77, 239, 230, 0.75)) drop-shadow(0 0 16px rgba(77, 239, 230, 0.45)); }
+  @media (prefers-reduced-motion: reduce) { .rot-redes { animation: none; background: none; -webkit-text-fill-color: currentColor; } }
+  .redes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px; }
+  .rede { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; color: var(--offwhite); text-decoration: none; background: rgba(244, 241, 234, 0.06);
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 10px 1px rgba(77, 239, 230, 0.7), 0 0 26px 2px rgba(77, 239, 230, 0.35); transition: box-shadow .3s ease, background .3s ease, color .3s ease, transform .3s ease; }
+  .rede svg { width: 24px; height: 24px; fill: currentColor; }
+  .rede:hover, .rede:focus-visible { background: var(--neon-forte); color: var(--preto); transform: translateY(-3px); outline: none;
+    box-shadow: 0 0 0 2px var(--neon-forte), 0 0 18px 4px rgba(140, 255, 247, 0.95), 0 0 48px 10px rgba(77, 239, 230, 0.6); }
+  .aviso-copia { margin: 12px 0 0; min-height: 1.3em; font-size: 0.85rem; color: #8CFFF7; }
+  button.rede { border: 0; cursor: pointer; font: inherit; }
+  .email-texto { user-select: all; overflow-wrap: anywhere; }
+  .rodape { align-items: start; }
+  .canais { align-content: start; }
+  .canais li { align-items: baseline; }
+  .canais { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  .canais li { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(244, 241, 234, 0.16); }
+  .canais .rot { flex: 0 0 150px; color: var(--cinza); font-size: 0.85rem; }
+  .canais a { text-decoration: none; border-bottom: 1px solid var(--turquesa); }
+  .canais .pendente { color: var(--cinza); }
+  .acoes-contato { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+  .btn svg { width: 20px; height: 20px; margin-right: 10px; fill: currentColor; flex: none; }
+  .rodape .btn.btn-zap { background: var(--turquesa); border-color: var(--neon); color: var(--preto); font-weight: 600;
+    box-shadow: 0 0 0 1.5px var(--neon), 0 0 12px 2px rgba(77, 239, 230, 0.75), 0 0 30px 3px rgba(77, 239, 230, 0.4); transition: box-shadow .3s ease, background .3s ease, transform .3s ease; }
+  .rodape .btn.btn-zap:hover, .rodape .btn.btn-zap:focus-visible { background: var(--neon-forte); border-color: var(--neon-forte); color: var(--preto); transform: translateY(-2px);
+    box-shadow: 0 0 0 2px var(--neon-forte), 0 0 18px 4px rgba(140, 255, 247, 0.95), 0 0 48px 10px rgba(77, 239, 230, 0.6); }
+  .rodape .btn { border-color: var(--offwhite); color: var(--offwhite); }
+  .rodape .btn:hover { background: var(--turquesa); border-color: var(--turquesa); color: var(--preto); }
+  .copy { padding-block: 0 36px; font-size: 0.8rem; color: var(--cinza); }
+
+  /* Celular: dois cards de foto por tela; deslize para o lado para ver os próximos */
+  @media (max-width: 699px) {
+    .galeria { gap: 12px; }
+    .cartao { flex: 0 0 calc((100vw - var(--gutter-l) - var(--gutter-r) - 12px) / 2); }
+  }
+  @media (min-width: 700px) {
+    .projeto { flex-basis: calc((100% - 28px) / 3); }
+    .cartao { flex-basis: clamp(220px, 31vw, 320px); }
+    .hero { gap: 48px; }
+    .hero-foto { aspect-ratio: 16 / 10; max-height: none; max-width: 1040px; }
+    .hero-foto.tem-foto img { object-position: 50% 14% !important; }
+    .reservado { grid-template-columns: 0.8fr 1.2fr; gap: 56px; }
+    .rodape { grid-template-columns: 1fr 1fr; gap: 56px; }
+  }
+  @media (min-width: 1100px) {
+    .projetos-grade { gap: 40px 18px; }
+    .projeto { flex-basis: calc((100% - 72px) / 5); }
+    .galeria { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; overflow: visible; margin-inline: 0; padding-inline: 0; scroll-snap-type: none; }
+    .cartao { flex: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .slide, .media, .slide.is-active .media { transition: none !important; }
+    .cartao, .cartao:hover { transition: none; transform: none; }
+    .menu a, .menu a:hover, .menu a:focus-visible { transition: none; animation: none; }
+    .vcard, .vcard:hover { transition: none; transform: none; }
+    .topo-btn, .topo-btn:hover { transition: none; }
+    .menu-btn, .barras i { transition: none; }
+    .topo[data-js] .menu.aberto { animation: none; }
+    .rede, .rede:hover { transition: none; transform: none; }
+    .slide.is-active .media { transform: none; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Sam Castro, início">Sam Castro</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+      <span class="barras" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <nav class="menu" id="menuPrincipal" aria-label="Principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#blog">Blog</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <h1 class="so-leitor">Sam Castro</h1>
+      <div class="hero-foto tem-foto">
+        <img src="fotos/hero.jpg" alt="Sam Castro de camisa preta translúcida e óculos de lentes azuladas, com luz neon azul ao fundo" style="object-position: 50% 30%" fetchpriority="high" decoding="async">
+        <div class="hero-texto">
+          <p class="papel">Influenciador e criador de conteúdo digital</p>
+          <p class="areas">Moda, lifestyle, beleza, fitness e comunicação.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA: 5 cards, cada um com slideshow independente. Para usar as fotos reais, preencha as listas "fotos" em GALERIA (no script, no fim do arquivo). -->
+    <section class="galeria-secao" aria-label="Galeria de fotos">
+      <ul class="galeria" id="galeria" aria-label="Galeria de fotos de Sam Castro"></ul>
+    </section>
+
+    <!-- BIOGRAFIA -->
+    <section class="reservado sobre" id="sobre" data-bloco="biografia" aria-labelledby="sobre-titulo">
+      <div>
+        <p class="eyebrow">Sobre mim</p>
+        <h2 id="sobre-titulo" class="so-leitor">Sobre mim</h2>
+      </div>
+      <div class="sobre-corpo">
+        <div class="sobre-texto">
+          <p class="destaque-p">Olá! Eu sou <strong>Sam Castro</strong>,</p>
+          <p class="sub-destaque">criador de conteúdo apaixonado por <strong>beleza, moda e lifestyle</strong>.</p>
+          <p class="calibri">Atuo há <strong>mais de 6 anos no mercado</strong>, acompanhando tendências, lançamentos e construindo uma presença sólida nas redes sociais.</p>
+          <p class="calibri">Além de influenciador, sou <strong>empreendedor no ramo do marketing</strong>, trabalhando com diversas empresas locais e desenvolvendo estratégias de comunicação e posicionamento digital.</p>
+          <p class="italico-classico">Meu conteúdo é baseado em <strong>autenticidade, conexão com o público e entrega de valor real para as marcas</strong>.</p>
+        </div>
+
+        <div class="sobre-bloco">
+          <h3>Nichos de atuação</h3>
+          <ul class="nichos">
+            <li>Moda</li>
+            <li>Lifestyle</li>
+            <li>Vida fitness</li>
+            <li>Gastronomia</li>
+            <li>Compras &amp; consumo</li>
+            <li>Beleza &amp; autocuidado</li>
+          </ul>
+        </div>
+
+        <div class="sobre-bloco">
+          <h3>Diferenciais</h3>
+          <ul class="diferenciais">
+            <li>Conteúdo autêntico</li>
+            <li>Linguagem jovem e atual</li>
+            <li>Experiência em marketing</li>
+            <li>Boa conversão</li>
+            <li>Criação estratégica (não só postagem)</li>
+            <li>Entrega de conteúdo pronto para a marca reutilizar</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG: espaço reservado (artigos, dicas e bastidores) -->
+    <section class="reservado" id="blog" data-bloco="blog" aria-labelledby="blog-titulo">
+      <div>
+        <p class="eyebrow">Blog</p>
+        <h2 id="blog-titulo" class="so-leitor">Blog</h2>
+      </div>
+      <div class="caixa">
+        <strong>Espaço reservado · Blog</strong>
+        <ul>
+          <li>Artigos, dicas e bastidores sobre moda, lifestyle, beleza e fitness</li>
+          <li>Cada publicação com capa, título, data e um pequeno resumo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJETOS E COLABORAÇÕES: 14 vídeos em fileiras de 5 + 5 + 4. Cores dos nomes: --mbg (fundo) e --mfg (texto) em cada .marca-nome. -->
+    <section class="projetos" id="projetos" aria-labelledby="projetos-titulo">
+      <div class="projetos-topo">
+        <p class="eyebrow">Portfólio</p>
+        <h2 id="projetos-titulo" class="so-leitor">Projetos e colaborações</h2>
+      </div>
+      <ul class="projetos-grade">
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/americanas.mp4" poster="posters/americanas.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Americanas"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Americanas">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#E60014;--mfg:#FFFFFF">Americanas</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/mercado-livre.mp4" poster="posters/mercado-livre.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Mercado Livre"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Mercado Livre">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#FFE600;--mfg:#2D3277">Mercado Livre</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/picpay.mp4" poster="posters/picpay.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com PicPay"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de PicPay">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#21C25E;--mfg:#FFFFFF">PicPay</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/mcdonalds.mp4" poster="posters/mcdonalds.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com McDonald’s"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de McDonald’s">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#DA291C;--mfg:#FFC72C">McDonald’s</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/rexona.mp4" poster="posters/rexona.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Rexona"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Rexona">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#0B4DB8;--mfg:#FFFFFF">Rexona</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/shein.mp4" poster="posters/shein.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com SHEIN"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de SHEIN">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome wide" style="--mbg:#000000;--mfg:#FFFFFF">SHEIN</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/soufit.mp4" poster="posters/soufit.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Soufit"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Soufit">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#17191B;--mfg:#8BD400">Soufit</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/oro-laser.mp4" poster="posters/oro-laser.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Oro Laser"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Oro Laser">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-oro" style="--mbg:#FFFFFF;--mfg:#5E1D6E" aria-label="Oro Laser"><b>ORO</b>laser</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/academia-gavi-es.mp4" poster="posters/academia-gavi-es.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Academia Gaviões"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Academia Gaviões">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-gavioes" style="--mbg:#17191B;--mfg:#FFFFFF" aria-label="Academia Gaviões"><i>Academia Gaviões</i><small>24 horas</small></p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/capelux.mp4" poster="posters/capelux.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Capelux"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Capelux">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome" style="--mbg:#17191B;--mfg:#55C7C2">Capelux</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/kibom.mp4" poster="posters/kibom.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Kibon"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Kibon">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-kibon" style="--mbg:#FFFFFF;--mfg:#E2231A" aria-label="Kibon">Kibon</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/man-club.mp4" poster="posters/man-club.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Man Club"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Man Club">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-manclub" style="--mbg:#000000;--mfg:#FFFFFF" aria-label="Man Club"><b>MAN</b>CLUB</p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/vybbe-eventos.mp4" poster="posters/vybbe-eventos.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Vybbe Eventos"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Vybbe Eventos">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-vybbe" style="--mbg:#FFFFFF;--mfg:#000000" aria-label="Vybbe Eventos"><b>VYBBE</b><small>eventos</small></p>
+        </li>
+        <li class="projeto">
+          <div class="vcard">
+            <video src="videos/ferrovia.mp4" poster="posters/ferrovia.jpg" muted loop playsinline preload="none" aria-label="Vídeo da parceria com Ferrovia"></video>
+            <button class="som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo de Ferrovia">
+              <svg class="i-mudo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="i-som" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="marca-nome m-ferrovia" style="--mbg:#FFFFFF;--mfg:#B3141C" aria-label="Ferrovia">FERROVIA</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="rodape">
+      <div>
+        <p class="eyebrow">Contato profissional</p>
+        <h2 class="so-leitor">Vamos conversar</h2>
+        <div class="acoes-contato">
+          <a class="btn btn-zap" href="https://wa.me/5585981255365?text=Ol%C3%A1%2C%20Sam!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Chamar Sam Castro no WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.100-.7.8-.8 1-.3.2-.5.1a6.700 6.700 0 0 1-3.300-2.900c-.2-.4.200-.4.700-1.300.1-.1 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.300 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.800 11.900 11.900 0 0 0 4.600 4c1.700.7 2.400.8 3.200.7a2.700 2.700 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.3-.2-.5-.3z"/></svg>
+            Chamar no WhatsApp
+          </a>
+          <!-- MEDIA KIT -->
+          <a class="btn" href="https://samcastro.my.canva.site" target="_blank" rel="noopener">Conheça meu Media Kit</a>
+        </div>
+        <div class="redes-bloco">
+          <p class="rot-redes">Redes sociais</p>
+          <ul class="redes" aria-label="Redes sociais de Sam Castro">
+            <li><a class="rede" href="https://www.instagram.com/samcastroreal/" target="_blank" rel="noopener" aria-label="Instagram de Sam Castro" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.300A4.700 4.700 0 1 0 12 16.700 4.700 4.700 0 0 0 12 7.300zm0 7.700a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/><circle cx="17.100" cy="6.900" r="1.100"/><path d="M12 3.800c2.700 0 3 0 4.100.1 2.500.1 3.900 1.500 4 4 .1 1.100.1 1.400.1 4.100s0 3-.1 4.100c-.1 2.500-1.500 3.900-4 4-1.100.1-1.400.1-4.100.1s-3 0-4.100-.1c-2.500-.1-3.900-1.500-4-4-.1-1.100-.1-1.400-.1-4.100s0-3 .1-4.100c.1-2.500 1.500-3.900 4-4C9 3.800 9.300 3.800 12 3.800M12 2C9.200 2 8.900 2 7.800 2.100 4.400 2.200 2.200 4.400 2.100 7.800 2 8.900 2 9.200 2 12s0 3.100.1 4.200c.1 3.400 2.300 5.600 5.700 5.700 1.100.1 1.400.1 4.200.1s3.100 0 4.200-.1c3.400-.1 5.600-2.300 5.700-5.700.1-1.100.1-1.400.1-4.200s0-3.100-.1-4.200c-.1-3.400-2.300-5.600-5.700-5.700C15.100 2 14.800 2 12 2z"/></svg>
+            </a></li>
+            <li><a class="rede" href="https://www.tiktok.com/@samcastroreal" target="_blank" rel="noopener" aria-label="TikTok de Sam Castro" title="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.600 2h-3.200v13.300a2.800 2.800 0 1 1-2.800-2.800c.3 0 .6 0 .8.100V9.300a6 6 0 1 0 5.200 6V8.700a7.600 7.600 0 0 0 4.400 1.400V6.900a4.500 4.500 0 0 1-4.400-4.900z"/></svg>
+            </a></li>
+            <li><a class="rede" href="https://mail.google.com/mail/?view=cm&fs=1&to=contato.samcastro%40icloud.com&su=Contato%20pelo%20site" target="_blank" rel="noopener" aria-label="Enviar e-mail para Sam Castro" title="Enviar e-mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.200 2 7.800 6 7.800-6H4.200zM4 9.400V17h16V9.400l-8 6.200-8-6.200z"/></svg>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© Sam Castro · Influenciador digital e criador de conteúdo em Fortaleza, Ceará</p>
+  </div>
+</footer>
+
+<button class="topo-btn" id="voltarTopo" type="button" aria-label="Voltar ao topo da página" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 11.500l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+  // Cada card tem sua própria lista de fotos e seu próprio ritmo (3 a 4 segundos).
+  // Para usar as fotos reais, coloque os endereços em "fotos". Vazio = espaço reservado.
+  // "pos" é o enquadramento (object-position) para manter o rosto dentro do corte 3:4.
+  var GALERIA = [
+    { intervalo: 3200, atraso: 0, fotos: [
+      { src: "fotos/c1-1.jpg", pos: "50% 30%", alt: "Sam Castro caminhando em preto e branco numa avenida à noite" },
+      { src: "fotos/c1-2.jpg", pos: "50% 40%", alt: "Sam Castro em retrato de perfil, com luzes desfocadas ao fundo" },
+      { src: "fotos/c1-3.jpg", pos: "50% 35%", alt: "Sam Castro em preto e branco, olhando para o lado" },
+      { src: "fotos/c1-4.jpg", pos: "50% 35%", alt: "Sam Castro de perfil numa faixa de pedestres à noite" },
+      { src: "fotos/c1-5.jpg", pos: "50% 35%", alt: "Sam Castro de lado na calçada, olhando para a câmera" }
+,
+      { src: "fotos/c1-6.jpg", pos: "50% 35%", alt: "Sam Castro de colete preto e calça larga, posando em um estúdio cinza" },
+      { src: "fotos/c1-7.jpg", pos: "50% 35%", alt: "Retrato de Sam Castro em close, de jaqueta preta, olhando para a câmera" },
+      { src: "fotos/c1-8.jpg", pos: "50% 30%", alt: "Sam Castro de óculos aviador e camisa branca, olhando por cima do ombro" },
+      { src: "fotos/c1-9.jpg", pos: "50% 30%", alt: "Sam Castro de terno vinho e gravata clara, olhando para o lado" },
+      { src: "fotos/c1-10.jpg", pos: "50% 30%", alt: "Sam Castro de terno vinho, ajustando o paletó" }
+    ] },
+    { intervalo: 3700, atraso: 900, fotos: [
+      { src: "fotos/c2-1.jpg", pos: "50% 30%", alt: "Sam Castro sorrindo ao atravessar uma faixa de pedestres à noite" },
+      { src: "fotos/c2-2.jpg", pos: "50% 40%", alt: "Sam Castro em pé numa avenida iluminada à noite" },
+      { src: "fotos/c2-3.jpg", pos: "50% 35%", alt: "Sam Castro caminhando na faixa de pedestres, sorrindo" },
+      { src: "fotos/c2-4.jpg", pos: "50% 15%", alt: "Sam Castro em evento de Halloween, de camisa preta e calça branca" },
+      { src: "fotos/c2-5.jpg", pos: "50% 20%", alt: "Sam Castro posando em evento de Halloween" }
+,
+      { src: "fotos/c2-6.jpg", pos: "50% 30%", alt: "Sam Castro de terno preto caminhando em uma calçada, com um restaurante ao fundo" },
+      { src: "fotos/c2-7.jpg", pos: "50% 30%", alt: "Sam Castro de terno preto andando, com plantas e restaurante ao fundo" },
+      { src: "fotos/c2-8.jpg", pos: "50% 25%", alt: "Sam Castro de terno preto e óculos escuros, ajustando o paletó" },
+      { src: "fotos/c2-9.jpg", pos: "50% 30%", alt: "Sam Castro sorrindo à noite, de camisa de crochê, fazendo um sinal com a mão" },
+      { src: "fotos/c2-10.jpg", pos: "50% 35%", alt: "Sam Castro de colete preto e jeans largo em uma avenida iluminada à noite" },
+      { src: "fotos/c2-11.jpg", pos: "50% 30%", alt: "Sam Castro de camisa de crochê preta e branca em uma festa à noite" },
+      { src: "fotos/c2-12.jpg", pos: "50% 35%", alt: "Sam Castro de terno vinho apoiado em um poste, diante de uma escada branca" }
+    ] },
+    { intervalo: 3400, atraso: 1700, fotos: [
+      { src: "fotos/c3-1.jpg", pos: "50% 40%", alt: "Sam Castro sorrindo em um mirante de vidro com vista da cidade à noite" },
+      { src: "fotos/c3-2.jpg", pos: "50% 30%", alt: "Sam Castro sorrindo, em pé sobre o piso de vidro de um mirante" },
+      { src: "fotos/c3-3.jpg", pos: "50% 40%", alt: "Sam Castro sentado sobre o vidro, com a cidade iluminada ao fundo" },
+      { src: "fotos/c3-4.jpg", pos: "50% 70%", alt: "Sam Castro de cabeça para baixo sobre o vidro, com a cidade ao fundo" }
+,
+      { src: "fotos/c3-5.jpg", pos: "50% 30%", alt: "Sam Castro de colete preto e camisa listrada, sentado em uma cadeira de estúdio" },
+      { src: "fotos/c3-6.jpg", pos: "50% 30%", alt: "Sam Castro de colete preto e camisa listrada, em pé no estúdio" },
+      { src: "fotos/c3-7.jpg", pos: "50% 30%", alt: "Sam Castro de colete azul em um restaurante, diante de uma mesa de tacos" },
+      { src: "fotos/c3-8.jpg", pos: "50% 30%", alt: "Sam Castro de óculos e jaqueta esportiva preta em um restaurante" },
+      { src: "fotos/c3-9.jpg", pos: "50% 30%", alt: "Sam Castro de jaqueta esportiva preta, com um drinque na mão" },
+      { src: "fotos/c3-10.jpg", pos: "50% 25%", alt: "Sam Castro de terno vinho, encostado em um poste" }
+    ] },
+    { intervalo: 3900, atraso: 500, fotos: [
+      { src: "fotos/c4-1.jpg", pos: "50% 60%", alt: "Retrato de Sam Castro com jaqueta de couro, olhando para a câmera" },
+      { src: "fotos/c4-2.jpg", pos: "50% 40%", alt: "Sam Castro de perfil, olhando para baixo, com jaqueta de couro" },
+      { src: "fotos/c4-3.jpg", pos: "50% 40%", alt: "Sam Castro de perfil, com jaqueta de couro, ao lado de um refletor" },
+      { src: "fotos/c4-4.jpg", pos: "50% 20%", alt: "Retrato de Sam Castro com jaqueta de couro e um refletor ao fundo" },
+      { src: "fotos/c4-5.jpg", pos: "50% 15%", alt: "Sam Castro de jaqueta de couro em um evento" },
+      { src: "fotos/c4-6.jpg", pos: "50% 45%", alt: "Sam Castro de jaqueta de couro em uma rua com lanternas vermelhas" }
+,
+      { src: "fotos/c4-7.jpg", pos: "50% 30%", alt: "Sam Castro sentado de jaqueta college, com um bolo azul de aniversário e um sparkler na boca" },
+      { src: "fotos/c4-8.jpg", pos: "50% 30%", alt: "Sam Castro agachado de jaqueta college, acendendo as velas de um bolo azul" },
+      { src: "fotos/c4-9.jpg", pos: "50% 30%", alt: "Sam Castro sentado em uma cadeira de estúdio, de camisa do Brasil e jeans" },
+      { src: "fotos/c4-10.jpg", pos: "50% 30%", alt: "Sam Castro de camisa do Brasil, com a mão no queixo, em uma cadeira de estúdio" },
+      { src: "fotos/c4-11.jpg", pos: "50% 30%", alt: "Sam Castro de camisa do Brasil, com as mãos atrás da cabeça" }
+    ] },
+    { intervalo: 3000, atraso: 1300, fotos: [
+      { src: "fotos/c5-1.jpg", pos: "50% 20%", alt: "Sam Castro sorrindo, de gorro vermelho e camiseta com chamas" },
+      { src: "fotos/c5-2.jpg", pos: "50% 30%", alt: "Sam Castro saindo de uma porta giratória, olhando o celular" },
+      { src: "fotos/c5-3.jpg", pos: "50% 55%", alt: "Sam Castro de óculos escuros e casaco de oncinha, tirando uma selfie" },
+      { src: "fotos/c5-4.jpg", pos: "50% 45%", alt: "Sam Castro em uma passarela, apontando para a avenida lá embaixo" },
+      { src: "fotos/c5-5.jpg", pos: "50% 85%", alt: "Sam Castro olhando para a câmera em uma rua com lanternas vermelhas" }
+,
+      { src: "fotos/c5-6.jpg", pos: "50% 35%", alt: "Sam Castro de regata marrom e óculos, diante de um mural colorido" },
+      { src: "fotos/c5-7.jpg", pos: "50% 35%", alt: "Sam Castro de óculos e bebida na mão, em frente a um mural colorido" },
+      { src: "fotos/c5-8.jpg", pos: "50% 30%", alt: "Sam Castro de óculos prateados e camisa translúcida, diante de um painel de evento" },
+      { src: "fotos/c5-9.jpg", pos: "50% 35%", alt: "Sam Castro de boné e óculos escuros em um festival colorido" },
+      { src: "fotos/c5-10.jpg", pos: "50% 35%", alt: "Sam Castro de camisa da seleção brasileira à beira de uma piscina" },
+      { src: "fotos/c5-11.jpg", pos: "50% 25%", alt: "Sam Castro de terno vinho diante de uma estrutura vermelha" }
+    ] }
+  ];
+  var QTD_PLACEHOLDER = 4;
+  var FADE_MS = 1400;
+
+  var reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var lista = document.getElementById("galeria");
+
+  var cards = GALERIA.map(function (cfg, i) {
+    var li = document.createElement("li");
+    li.className = "cartao";
+    var slides = [];
+    var total = cfg.fotos.length || QTD_PLACEHOLDER;
+
+    for (var j = 0; j < total; j++) {
+      var slide = document.createElement("div");
+      slide.className = "slide";
+      var m;
+      if (cfg.fotos.length) {
+        m = document.createElement("img");
+        m.className = "media";
+        m.src = cfg.fotos[j].src;
+        m.alt = cfg.fotos[j].alt;
+        m.style.objectPosition = cfg.fotos[j].pos || "50% 35%";
+        m.loading = j === 0 ? "eager" : "lazy";
+        m.decoding = "async";
+        m.draggable = false;
+      } else {
+        m = document.createElement("div");
+        m.className = "media ph ph-" + ((i + j) % 4);
+        m.setAttribute("aria-hidden", "true");
+        m.innerHTML = "<span>Foto " + (i + 1) + "." + (j + 1) + "</span>";
+      }
+      slide.appendChild(m);
+      li.appendChild(slide);
+      slides.push(slide);
+    }
+    slides[0].classList.add("is-active");
+    lista.appendChild(li);
+    return { el: li, slides: slides, atual: 0, cfg: cfg, timer: null, visivel: false, primeira: true };
+  });
+
+  function avancar(c) {
+    var proxIdx = (c.atual + 1) % c.slides.length;
+    var img = c.slides[proxIdx].querySelector("img");
+    if (img && !img.complete) { agendar(c, 300); return; } // espera a próxima foto carregar
+    var prev = c.slides[c.atual];
+    c.atual = proxIdx;
+    var prox = c.slides[c.atual];
+    prev.classList.remove("is-active");
+    prev.classList.add("is-leaving");
+    prox.classList.add("is-active");
+    setTimeout(function () { prev.classList.remove("is-leaving"); }, FADE_MS);
+    agendar(c, c.cfg.intervalo);
+  }
+  function agendar(c, ms) {
+    clearTimeout(c.timer);
+    if (reduzir || c.slides.length < 2 || !c.visivel || document.hidden) return;
+    c.timer = setTimeout(function () { avancar(c); }, ms);
+  }
+  function iniciar(c) {
+    c.el.querySelectorAll("img[loading=lazy]").forEach(function (im) { im.loading = "eager"; });
+    agendar(c, c.primeira ? c.cfg.intervalo + c.cfg.atraso : c.cfg.intervalo); c.primeira = false; }
+  function parar(c) { clearTimeout(c.timer); }
+
+  if (!reduzir && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        var c = cards.filter(function (x) { return x.el === e.target; })[0];
+        c.visivel = e.isIntersecting;
+        if (c.visivel) iniciar(c); else parar(c);
+      });
+    }, { threshold: 0.25 });
+    cards.forEach(function (c) { obs.observe(c.el); });
+  } else if (!reduzir) {
+    cards.forEach(function (c) { c.visivel = true; iniciar(c); });
+  }
+  document.addEventListener("visibilitychange", function () {
+    cards.forEach(function (c) { if (document.hidden) parar(c); else if (c.visivel) iniciar(c); });
+  });
+
+  // Projetos: vídeos tocam mudos e em loop só enquanto estão na tela; o botão liga o som (um por vez).
+  (function () {
+    var vcards = Array.prototype.slice.call(document.querySelectorAll(".vcard"));
+    function mutarTodos(exceto) {
+      vcards.forEach(function (c) {
+        var v = c.querySelector("video"), b = c.querySelector(".som");
+        if (v !== exceto) { v.muted = true; b.setAttribute("aria-pressed", "false"); }
+      });
+    }
+    vcards.forEach(function (c) {
+      var v = c.querySelector("video"), b = c.querySelector(".som");
+      b.addEventListener("click", function () {
+        var ligar = v.muted;
+        if (ligar) { mutarTodos(v); v.muted = false; v.play().catch(function () {}); } else { v.muted = true; }
+        b.setAttribute("aria-pressed", ligar ? "true" : "false");
+        b.setAttribute("aria-label", (ligar ? "Desativar" : "Ativar") + " o som do vídeo");
+      });
+      v.addEventListener("click", function () { if (v.paused) v.play().catch(function () {}); else v.pause(); });
+    });
+    if (reduzir || !("IntersectionObserver" in window)) return;
+    var obsV = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target.querySelector("video");
+        if (e.isIntersecting) { v.play().catch(function () {}); }
+        else { v.pause(); if (!v.muted) { v.muted = true; e.target.querySelector(".som").setAttribute("aria-pressed", "false"); } }
+      });
+    }, { threshold: 0.45 });
+    vcards.forEach(function (c) { obsV.observe(c); });
+  })();
+
+  // Botão flutuante "voltar ao topo": aparece depois de rolar a página.
+  (function () {
+    var b = document.getElementById("voltarTopo");
+    if (!b) return;
+    b.hidden = false;
+    function atualizar() { b.classList.toggle("visivel", (window.pageYOffset || document.documentElement.scrollTop) > 500); }
+    window.addEventListener("scroll", atualizar, { passive: true });
+    atualizar();
+    b.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduzir ? "auto" : "smooth" });
+    });
+  })();
+
+
+  // Menu do celular: botão (hambúrguer) abre e fecha a lista de seções.
+  (function () {
+    var topo = document.querySelector(".topo"), btn = document.getElementById("menuBtn"), menu = document.getElementById("menuPrincipal");
+    if (!topo || !btn || !menu) return;
+    topo.setAttribute("data-js", "");
+    function abrir(v) {
+      menu.classList.toggle("aberto", v);
+      btn.setAttribute("aria-expanded", v ? "true" : "false");
+      btn.setAttribute("aria-label", v ? "Fechar menu" : "Abrir menu");
+    }
+    btn.addEventListener("click", function () { abrir(!menu.classList.contains("aberto")); });
+    menu.addEventListener("click", function (e) { if (e.target.closest("a")) abrir(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") abrir(false); });
+    document.addEventListener("click", function (e) { if (!topo.contains(e.target)) abrir(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 700) abrir(false); });
+  })();
+</script>
+
+</body></html>
